@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Order Tickets</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="content">
+            <img src="./static/main/main_01.jpg" alt="" />
+            <img src="./static/main/main_02.png" alt="" id="openModalBtn" />
+            <img src="./static/main/main_03.jpg" alt="" />
+            <a href="info.html"
+                ><img src="./static/main/main_04.jpg" alt="" id="menu"
+            /></a>
+        </div>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="50px"
+                        height="50px"
+                        class="share"
+                        id="shareBtn"
+                    >
+                        <image
+                            x="0px"
+                            y="0px"
+                            width="100%"
+                            height="100%"
+                            xlink:href="data:img/png;base64,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"
+                        />
+                    </svg>
+
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="50px"
+                        height="50px"
+                        class="close"
+                        id="closeModalBtn"
+                    >
+                        <image
+                            x="0px"
+                            y="0px"
+                            width="100%"
+                            height="100%"
+                            xlink:href="data:img/png;base64,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"
+                        />
+                    </svg>
+                </div>
+                <img
+                    src="./static/Modal1/header.png"
+                    alt="SNKRS Pass"
+                    class="modal-img"
+                />
+                <img
+                    src="./static/Modal1/title.png"
+                    alt="title"
+                    class="modal-img"
+                />
+                <img
+                    src="./static/Modal1/content1.png"
+                    alt="content1"
+                    class="modal-img"
+                />
+                <img
+                    src="./static/Modal1/content2.png"
+                    alt="content2"
+                    class="modal-img"
+                />
+                <img
+                    src="./static/Modal1/content3.png"
+                    alt="content3"
+                    class="modal-img"
+                />
+                <img
+                    src="./static/Modal1/content4.png"
+                    alt="content4"
+                    class="modal-img"
+                />
+                <img
+                    src="./static/Modal1/content5.png"
+                    alt="content5"
+                    class="modal-img"
+                    style="padding-bottom: 50px"
+                />
+                <img
+                    src="./static/Modal1/content6.png"
+                    alt="content6"
+                    class="modal-img"
+                    style="padding-bottom: 50px"
+                />
+                <img
+                    src="./static/Modal1/content7.png"
+                    alt="content7"
+                    class="modal-img"
+                    style="padding-bottom: 50px"
+                />
+                <img
+                    src="./static/Modal1/content8.png"
+                    alt="content8"
+                    class="modal-img"
+                    style="padding-bottom: 50px"
+                />
+                <img
+                    src="./static/Modal1/pass.png"
+                    alt="View Pass"
+                    class="view-pass-btn"
+                    id="viewPassBtn"
+                />
+            </div>
+        </div>
+
+        <div id="secondaryModal" class="modal">
+            <div class="modal-content secondary-modal-content">
+                <div class="secondary-modal-header">
+                    <img
+                        src="./static/Modal1/close-icon.png"
+                        alt="Close"
+                        class="close"
+                        id="closeSecondaryModalBtn"
+                    />
+                </div>
+                <img
+                    src="./static/Modal2/title.png"
+                    alt="title"
+                    class="modal-img"
+                    style="padding-top: 10px"
+                />
+                <div id="logo2">
+                    <img
+                        src="./static/Modal2/logojp.png"
+                        alt="title"
+                        class="modal-img"
+                        id="modal2-logo"
+                    />
+                    <img
+                        src="./static/Modal2/round3.png"
+                        alt="round"
+                        class="modal-img"
+                        id="modal2-round"
+                    />
+                    <img
+                        src="./static/Modal2/product.png"
+                        alt="product"
+                        class="modal-img"
+                        id="modal2-product"
+                    />
+                </div>
+                <img
+                    src="./static/Modal2/content21.png"
+                    alt="content21"
+                    class="modal-img"
+                />
+                <a href="#content22">
+                    <img
+                        src="./static/Modal2/content22.png"
+                        alt="content22"
+                        class="modal-img"
+                        id="content22"
+                    />
+                </a>
+                <img
+                    src="./static/Modal2/content23.png"
+                    alt="content23"
+                    class="modal-img"
+                />
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+        <script>
+            document
+                .getElementById("content22")
+                .addEventListener("click", function (e) {
+                    e.preventDefault();
+                    document
+                        .getElementById("content22")
+                        .scrollIntoView({ behavior: "smooth" });
+                });
+        </script>
+    </body>
+</html>

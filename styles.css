@@ -1,0 +1,146 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+.content img {
+    width: 100%;
+    display: block;
+}
+#menu {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100vh;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: fadeInUp 0.5s forwards;
+}
+.modal-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    box-sizing: border-box;
+    overflow-y: auto;
+    animation: slideUp 0.5s forwards;
+}
+.modal-header {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+.close,
+.share {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    opacity: 0.9;
+}
+.view-pass-btn {
+    position: fixed;
+    width: 100%;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+.modal-img {
+    width: 100vw;
+    display: block;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes slideUp {
+    from {
+        bottom: -100%;
+    }
+    to {
+        bottom: 0;
+    }
+}
+@keyframes fadeOutDown {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@keyframes slideDown {
+    from {
+        bottom: 0;
+    }
+    to {
+        bottom: -100%;
+    }
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.secondary-modal-content {
+    background-color: #f5f5f5;
+}
+.secondary-modal-header {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+.secondary-modal-img {
+    width: auto;
+    height: auto;
+    max-height: 70vh;
+    display: block;
+    margin: 0 auto;
+}
+
+#logo2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    padding-top: 75px;
+    position: relative;
+    margin-bottom: 50px;
+}
+#modal2-logo {
+    width: 30%;
+}
+
+#modal2-round {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    padding-top: -150px;
+    animation: rotate 30s linear infinite;
+}
+#modal2-product {
+    width: 50%;
+    z-index: 1;
+    padding-top: 37px;
+}

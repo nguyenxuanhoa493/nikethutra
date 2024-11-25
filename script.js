@@ -67,3 +67,16 @@ window.onclick = function (event) {
 shareBtn.onclick = function () {
     alert("Share functionality is not implemented.");
 };
+document.getElementById("menu").addEventListener("click", function () {
+    var content = document.getElementById("content");
+    if (content.getAttribute("label") === "1") {
+        content.setAttribute("label", "2");
+        content.innerHTML = "<img src='./static/info.png' alt='' />";
+        document.getElementById("menu").src = "./static/main/main_05.jpg";
+    } else {
+        content.setAttribute("label", "1");
+        content.innerHTML =
+            "<img src='./static/main/main_01.jpg' alt='' /><img src='./static/main/main_02.png' alt='' id='openModalBtn' /><img src='./static/main/main_03.jpg' alt='' />";
+        document.getElementById("menu").src = "./static/main/main_04.jpg";
+    }
+});

@@ -68,15 +68,25 @@ shareBtn.onclick = function () {
     alert("Share functionality is not implemented.");
 };
 document.getElementById("menu").addEventListener("click", function () {
-    var content = document.getElementById("content");
-    if (content.getAttribute("label") === "1") {
-        content.setAttribute("label", "2");
-        content.innerHTML = "<img src='./static/info.png' alt='' />";
-        document.getElementById("menu").src = "./static/main/main_05.jpg";
+    var mail_title = document.getElementById("mail_title");
+    var openModalBtn = document.getElementById("openModalBtn");
+    var mail_bg = document.getElementById("mail_bg");
+    var menuBar = document.getElementById("menu");
+    var info_user = document.getElementById("info");
+
+    if (menuBar.getAttribute("label") === "1") {
+        menuBar.setAttribute("label", "2");
+        menuBar.src = "./static/main/main_05.jpg";
+        mail_title.style.display = "none";
+        openModalBtn.style.display = "none";
+        mail_bg.style.display = "none";
+        info_user.style.display = "";
     } else {
-        content.setAttribute("label", "1");
-        content.innerHTML =
-            "<img src='./static/main/main_01.jpg' alt='' /><img src='./static/main/main_02.png' alt='' id='openModalBtn' /><img src='./static/main/main_03.jpg' alt='' />";
-        document.getElementById("menu").src = "./static/main/main_04.jpg";
+        menuBar.setAttribute("label", "1");
+        menuBar.src = "./static/main/main_04.jpg";
+        mail_title.style.display = "";
+        openModalBtn.style.display = "";
+        mail_bg.style.display = "";
+        info_user.style.display = "None";
     }
 });
